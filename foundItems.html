@@ -1,19 +1,48 @@
-<html>
-  <head>
-    <title>foundItems.html</title>
-  </head>
+<h3>Title : {{ list.title }}</h3>
 
-  <body>
-    This is 'foundItems.html' file !
-  </body>
-</html>
-
-<!-- <h3>Title : {{ list.title }}</h3>
-
-<ul>
+<!-- <ul>
   <li ng-if="items.length == 0" class="error">Nothing found !</li>
   <li ng-repeat="item in items">
     {{ item.name }}, {{ item.short_name }}, {{ item.description }}
     <button ng-click="list.onRemove({index: $index});">Don't want this one !</button>
   </li>
 </ul> -->
+
+<ul>
+    <div ng-if="narrowDown.found.length == 0" class="error">{{ narrowDown.nothingFound }}</div>
+
+    <div ng-show="!(narrowDown.found.length == 0)" style="color:blue; font-weight:bold;">
+      {{ narrowDown.found.length }} {{ narrowDown.message }}<br /><br />
+    </div>
+
+    <div>
+      <li ng-repeat="item in narrowDown.found" style="border:solid 1px; border-radius:5px; margin-bottom:11px;">
+          <table>
+            <tr>
+              <td><label>* Name</label></td>
+              <td>:&nbsp;</td>
+              <td>{{ item.name }}</td>
+            </tr>
+
+            <tr>
+              <td><label>* Short Name</label></td>
+              <td>:&nbsp;</td>
+              <td>{{ item.short_name }}</td>
+            </tr>
+
+            <tr>
+              <td><label>* Description</label></td>
+              <td>:&nbsp;</td>
+              <td>{{ item.description }}</td>
+            </tr>
+
+            <tr>
+              <td colspan="2">&nbsp</td>
+              <td>
+                <button ng-click="narrowDown.doNotWantThisOne({index: $index});">Don't want this one !</button>
+              </td>
+            </tr>
+          </table>
+      </li>
+    </div>
+</ul>
