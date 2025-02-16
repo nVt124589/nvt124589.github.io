@@ -1,1 +1,27 @@
-Module 1 Solution..
+<!DOCTYPE html>
+<html ng-app='LunchCheckApp'>
+	<head>
+		<meta charset="UTF-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<style>body { font-size: 1.8em; }</style>
+		<title>Assignment-1.md</title>
+	</head>
+
+	<body>
+		<h1>Assignment-1.md</h1>
+
+		<div ng-controller='LunchCheckController'>
+			<div>
+				<label>Enter list of items that you eat for lunch</label>
+			</div>
+			<div>
+				<input type="text" ng-model="lunchItems" style="width: 321px;" />
+				<button ng-click="checkLunchItms();">Check If Too Much</button>
+			</div>
+			<div ng-style="{'color': textColor, 'width': borderWidth, 'border': border, 'border-radius': borderRadius}">
+				{{ result }}
+			</div>
+		</div>
+	</body>
+</html>

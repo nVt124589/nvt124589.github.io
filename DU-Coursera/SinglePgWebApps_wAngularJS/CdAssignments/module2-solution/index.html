@@ -1,1 +1,68 @@
-Module 2 Solution..
+<!DOCTYPE html>
+<html ng-app='ShoppingListCheckOffApp'>
+	<head>
+		<meta charset="UTF-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Assignment-2.md</title>
+	</head>
+
+	<body>
+		<h1>Assignment-2.md</h1>
+
+		<table>
+				<tr>
+						<th class="widthSmall txtMiddleAlign"><h3>To Buy</h3></th>
+						<th class="widthSmall">&nbsp;</th>
+						<th class="widthSmall txtMiddleAlign"><h3>Already Bought</h3></th>
+				</tr>
+
+				<tr>
+						<td class="widthSmall borders">
+								<div ng-controller='ToBuyController as toBuyList'>
+									<div>
+										<ul>
+											<li ng-if="toBuyList.items.length == 0" class="error">
+												Everything is bought !
+											</li>
+
+											<li ng-repeat="item in toBuyList.items">
+												<table>
+													<tr>
+														<td class="toBuyLsItmsTxtWidth">
+															Buy {{ item.quantity }} {{ item.name }}
+														</td>
+
+														<td>
+															<button ng-click="toBuyList.itemBought($index);">Bought</button>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+									</div>
+							 </div>
+					 </td>
+
+					 <td class="widthSmall">&nbsp;</td>
+
+					 <td class="widthSmall borders" style="margin-left: 11px;">
+							<div ng-controller='AlreadyBoughtController as alreadyBoughtList'>
+								<div>
+									<ul>
+										<li ng-if="alreadyBoughtList.items.length == 0" class="error">
+											Nothing bought yet
+										</li>
+
+										<li ng-repeat="item in alreadyBoughtList.items">
+											<div>Bought {{ item.quantity }} {{ item.name }}</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+					 </td>
+				</tr>
+		</table>
+	</body>
+</html>

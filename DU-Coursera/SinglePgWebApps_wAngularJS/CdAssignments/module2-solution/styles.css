@@ -1,0 +1,29 @@
+body {
+  font-size: 1.2em;
+}
+
+.error {
+  color: red;
+}
+
+.toBuyLsItmsTxtWidth {
+  width: 150px;
+}
+
+.widthSmall {
+  width: 25%;
+}
+
+.widthLarge {
+  width: 100%;
+}
+
+.txtMiddleAlign {
+  text-align: center;
+}
+
+.borders {
+  border: solid 1px;
+  border-radius: 11px;
+  width: 210px;
+}
