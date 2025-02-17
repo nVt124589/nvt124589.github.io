@@ -62,11 +62,11 @@
         .catch(function(error) { console.log("Error : " + error + " !"); });
       };
 
-      narrowDown.doNotWantThisOne = function(items, itemIndex) {
-        items.splice(itemIndex, 1);
+      narrowDown.doNotWantThisOne = function(items, itemIndex, msg) {
+        if (items.length !== 0) msg = items.length == 1 ? " item is shown." : " items are shown.";
+        else msg = "";
 
-        if (items.length !== 0) narrowDown.message = items.length == 1 ? " item is shown." : " items are shown.";
-        else narrowDown.message = "";
+        items.splice(itemIndex, 1);
       }
   }
 
