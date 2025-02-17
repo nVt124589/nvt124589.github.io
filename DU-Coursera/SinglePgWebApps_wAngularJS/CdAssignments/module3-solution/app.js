@@ -63,10 +63,10 @@
       };
 
       narrowDown.doNotWantThisOne = function(items, itemIndex, msg) {
-        if (items.length !== 0) msg = items.length === 1 ? " item is shown." : " items are shown.";
-        else msg = "";
-
         items.splice(itemIndex, 1);
+
+        if (items.length !== 0) msg = items.length === 1 ? " item is shown." : " items are shown.";
+        else msg = "";        
       }
   }
 
