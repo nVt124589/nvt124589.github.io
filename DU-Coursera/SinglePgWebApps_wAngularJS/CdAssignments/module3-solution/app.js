@@ -24,11 +24,25 @@
         title: '@title',
         message: '@message',
         onRemove: '&'
-      }
+      },
+
+      controller: FoundItemsDirectiveController,
+      controllerAs: 'narrowDown',
+      bindToController: true
     };
 
     return ddo;
   }
+
+  function ShoppingListDirectiveController() {
+    var narrowDown = this;
+
+    narrowDown.msg = function(narrowDown.message) {
+      if (narrowDown.items.length !== 0) msg = narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
+      else msg = "";
+
+      return msg;
+    };
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
@@ -62,14 +76,7 @@
         .catch(function(error) { console.log("Error : " + error + " !"); });
       };
 
-      narrowDown.doNotWantThisOne = function(items, itemIndex, msg) {
-        items.splice(itemIndex, 1);
-
-        if (items.length !== 0) msg = items.length > 1 ? " items are shown." : " item is shown.";
-        else msg = "";
-
-        return msg;
-      }
+      narrowDown.doNotWantThisOne = function(items, itemIndex) { items.splice(itemIndex, 1); }
   }
 
   MenuSearchService.$inject = ['$http', 'ApiBasePath'];
