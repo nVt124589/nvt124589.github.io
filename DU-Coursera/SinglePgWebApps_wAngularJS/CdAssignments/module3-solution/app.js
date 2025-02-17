@@ -18,44 +18,7 @@
 
   function FoundItemsDirective() {
     var ddo = {
-      template: `
-        <ul>
-            <div ng-show="!(items.length == 0)" style="color:darkviolet; font-weight:bold;">
-              {{ items.length }} {{ message }}<br /><br />
-            </div>
-
-            <div>
-              <li ng-repeat="item in items" style="border:solid 1px; border-radius:5px; margin-bottom:15px;">
-                  <table>
-                    <tr>
-                      <td><label>&nbsp;&nbsp;Name</label></td>
-                      <td>:&nbsp;</td>
-                      <td>{{ item.name }}</td>
-                    </tr>
-
-                    <tr>
-                      <td><label>&nbsp;&nbsp;Short Name</label></td>
-                      <td>:&nbsp;</td>
-                      <td>{{ item.short_name }}</td>
-                    </tr>
-
-                    <tr>
-                      <td><label>&nbsp;&nbsp;Description</label></td>
-                      <td>:&nbsp;</td>
-                      <td>{{ item.description }}</td>
-                    </tr>
-
-                    <tr>
-                      <td colspan="2">&nbsp</td>
-                      <td>
-                        <button ng-click="onRemove({menuItms: items, index: $index});">Don't want this one !</button>
-                      </td>
-                    </tr>
-                  </table>
-              </li>
-            </div>
-        </ul>
-      `,
+      templateUrl: 'https://nvt124589.github.io/DU-Coursera/SinglePgWebApps_wAngularJS/CdAssignments/foundItems.html',
       scope: {
         items: '<',
         title: '@title',
