@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+	<head>
+		<meta charset="UTF-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Assignment-3.md</title>
+	</head>
 
+	<body>
+		<h1>Assignment-3.md</h1>
+
+		<div ng-controller='NarrowItDownController as narrowDown'>
+				<h3>{{ narrowDown.title }}</h3>
+
+				<div>
+						<input type="text" placeholder="Enter a Search Term (i.e. Rice, Soup, etc.)" class="widthSmall" ng-model="narrowDown.term2Search" />
+						<button ng-click="narrowDown.menuSearch();">Narrow It Down for Me !</button>
+				</div>
+
+				<div>
+						<div ng-if="!narrowDown.shown" class="error">&nbsp;{{ narrowDown.error }}</div>
+
+						<div>
+							<div ng-if="narrowDown.found.length == 0" class="error" style="margin-top:15px;">{{ narrowDown.nothingFound }}</div>
+
+							<found-items items="narrowDown.found"
+												 	 title="{{ narrowDown.title }}"
+													 message="{{ narrowDown.message }}"
+													 on-remove="narrowDown.doNotWantThisOne(menuItms, index);"></found-items>
+						</div>
+				</div>
+		</div>
+	</body>
+</html>
