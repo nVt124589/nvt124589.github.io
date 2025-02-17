@@ -67,6 +67,8 @@
 
         if (items.length !== 0) msg = items.length > 1 ? " items are shown." : " item is shown.";
         else msg = "";
+
+        return msg;
       }
   }
 
