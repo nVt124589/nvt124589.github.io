@@ -56,7 +56,7 @@
         .then(function(response) {
           narrowDown.found = response;
 
-          if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length > 1 ? " items are shown." : " item is shown.";
+          if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length == 1 ? " item is shown." : " items are shown.";
           else narrowDown.message = "";
         })
         .catch(function(error) { console.log("Error : " + error + " !"); });
