@@ -18,7 +18,7 @@
 
   function FoundItemsDirective() {
     var ddo = {
-      templateUrl: '/DU-Coursera/SinglePgWebApps_wAngularJS/CdAssignments/foundItems.html',      
+      templateUrl: 'https://nvt124589.github.io/DU-Coursera/SinglePgWebApps_wAngularJS/CdAssignments/foundItems.html',      
       scope: {
         items: '<',
         title: '@title',
