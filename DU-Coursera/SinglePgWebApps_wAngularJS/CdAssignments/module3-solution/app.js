@@ -56,13 +56,18 @@
         .then(function(response) {
           narrowDown.found = response;
 
-          if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length == 1 ? " item is shown." : " items are shown.";
+          if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length > 1 ? " items are shown." : " item is shown.";
           else narrowDown.message = "";
         })
         .catch(function(error) { console.log("Error : " + error + " !"); });
       };
 
-      narrowDown.doNotWantThisOne = function(items, itemIndex) { items.splice(itemIndex, 1); }
+      narrowDown.doNotWantThisOne = function(items, itemIndex) {
+        items.splice(itemIndex, 1);
+
+        if (items.length !== 0) narrowDown.message = items.length == 1 ? " item is shown." : " items are shown.";
+        else narrowDown.message = "";
+      }
   }
 
   MenuSearchService.$inject = ['$http', 'ApiBasePath'];
