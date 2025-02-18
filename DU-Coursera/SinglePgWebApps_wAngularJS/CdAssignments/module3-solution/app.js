@@ -38,8 +38,8 @@
     var nD = this;
 
     nD.msg = function() {
-      if (nD.items.length !== 0) nD.message = nD.items.length > 1 ? " items are shown." : " item is shown.";
-      else nD.message = "";
+      if (nD.items.length > 1) nD.message = " items are shown.";
+      else nD.message = " item is shown.";
 
       return nD.message;
     };
