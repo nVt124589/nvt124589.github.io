@@ -38,8 +38,12 @@
     var narrowDown = this;
 
     narrowDown.msg = function(narrowDown.message) {
-      if (narrowDown.items.length !== 0) return narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
-      else return "";
+      var msg = "";
+
+      if (narrowDown.items.length !== 0) msg = narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
+      else msg = "";
+
+      return msg;
     };
 
   NarrowItDownController.$inject = ['MenuSearchService'];
