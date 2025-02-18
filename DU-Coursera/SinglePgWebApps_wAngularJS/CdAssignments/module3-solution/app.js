@@ -45,6 +45,7 @@
 
       return msg;
     };
+  }
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
