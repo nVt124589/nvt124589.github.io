@@ -37,8 +37,8 @@
   function FoundItemsDirectiveController() {
     var nD = this;
 
-    nD.msg = function() {
-      if (nD.items.length > 1) nD.message = " items are shown.";
+    nD.msg = function(itmsLength) {
+      if (itmsLength > 1) nD.message = " items are shown.";
       else nD.message = " item is shown.";
 
       return nD.message;
