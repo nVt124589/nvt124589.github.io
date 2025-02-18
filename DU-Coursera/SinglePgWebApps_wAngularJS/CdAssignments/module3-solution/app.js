@@ -24,26 +24,26 @@
         title: '@title',
         message: '@message',
         onRemove: '&'
-      }//,
+      },
 
-      //controller: FoundItemsDirectiveController,
-      //controllerAs: 'narrowDown',
-      //bindToController: true
+      controller: FoundItemsDirectiveController,
+      controllerAs: 'nD',
+      bindToController: true
     };
 
     return ddo;
   }
 
-  /* function FoundItemsDirectiveController() {
-    var narrowDown = this;
+  function FoundItemsDirectiveController() {
+    var nD = this;
 
-    narrowDown.msg = function() {
-      var msg = "";
-      if (narrowDown.items.length !== 0) msg = narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
-      else msg = "";
-      return msg;
+    nD.msg = function() {
+      if (nD.items.length !== 0) nD.message = nD.items.length > 1 ? " items are shown." : " item is shown.";
+      else nD.message = "";
+
+      return nD.message;
     };
-  } */
+  }
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
