@@ -24,7 +24,7 @@
         title: '@title',
         message: '@message',
         onRemove: '&'
-      },
+      }//,
 
       //controller: FoundItemsDirectiveController,
       //controllerAs: 'narrowDown',
