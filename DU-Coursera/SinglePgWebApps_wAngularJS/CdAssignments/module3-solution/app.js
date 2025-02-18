@@ -26,26 +26,24 @@
         onRemove: '&'
       },
 
-      controller: FoundItemsDirectiveController,
-      controllerAs: 'narrowDown',
-      bindToController: true
+      //controller: FoundItemsDirectiveController,
+      //controllerAs: 'narrowDown',
+      //bindToController: true
     };
 
     return ddo;
   }
 
-  function FoundItemsDirectiveController() {
+  /* function FoundItemsDirectiveController() {
     var narrowDown = this;
 
     narrowDown.msg = function() {
       var msg = "";
-
       if (narrowDown.items.length !== 0) msg = narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
       else msg = "";
-
       return msg;
     };
-  }
+  } */
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
