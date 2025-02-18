@@ -37,7 +37,7 @@
   function FoundItemsDirectiveController() {
     var narrowDown = this;
 
-    narrowDown.msg = function(narrowDown.message) {
+    narrowDown.msg = function() {
       var msg = "";
 
       if (narrowDown.items.length !== 0) msg = narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
