@@ -38,10 +38,8 @@
     var narrowDown = this;
 
     narrowDown.msg = function(narrowDown.message) {
-      if (narrowDown.items.length !== 0) msg = narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
-      else msg = "";
-
-      return msg;
+      if (narrowDown.items.length !== 0) return narrowDown.items.length > 1 ? " items are shown." : " item is shown.";
+      else return "";
     };
 
   NarrowItDownController.$inject = ['MenuSearchService'];
@@ -70,8 +68,8 @@
         .then(function(response) {
           narrowDown.found = response;
 
-          //if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length > 1 ? " items are shown." : " item is shown.";
-          //else narrowDown.message = "";
+          /* if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length > 1 ? " items are shown." : " item is shown.";
+          else narrowDown.message = ""; */
         })
         .catch(function(error) { console.log("Error : " + error + " !"); });
       };
