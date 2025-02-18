@@ -24,31 +24,17 @@
         title: '@title',
         message: '@message',
         onRemove: '&'
-      }/* ,
-
-      controller: FoundItemsDirectiveController,
-      controllerAs: 'nD',
-      bindToController: true */
+      }
     };
 
     return ddo;
   }
 
-  /* function FoundItemsDirectiveController() {
-    var nD = this;
-    nD.msg = function() {
-      if (nD.items.length > 1) nD.message = " items are shown.";
-      else if (nD.items.length === 1) nD.message = " item is shown.";
-      else nD.message = "";
-      return nD.message;
-    };
-  } */
-
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
       var narrowDown = this;
 
-      narrowDown.title = "Menu Items";
+      narrowDown.title = "Narrow Restaurant's Menu Item Descriptions Down for Me !";
 
       narrowDown.menuSearch = function() {
         narrowDown.message = "";
@@ -76,7 +62,12 @@
         .catch(function(error) { console.log("Error : " + error + " !"); });
       };
 
-      narrowDown.doNotWantThisOne = function(items, itemIndex) { items.splice(itemIndex, 1); }
+      narrowDown.doNotWantThisOne = function(items, itemIndex) {
+        items.splice(itemIndex, 1);
+
+        if (items.length !== 0) narrowDown.message = items.length > 1 ? " items are shown." : " item is shown.";
+        else narrowDown.message = "";
+      }
   }
 
   MenuSearchService.$inject = ['$http', 'ApiBasePath'];

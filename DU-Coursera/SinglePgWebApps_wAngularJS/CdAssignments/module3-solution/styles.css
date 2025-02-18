@@ -9,6 +9,7 @@ body {
 label {
   color: green;
   font-style: italic;
+  margin-left: 5px;
 }
 
 .toBuyLsItmsTxtWidth {
@@ -30,5 +31,11 @@ label {
 .borders {
   border: solid 1px;
   border-radius: 11px;
-  width: 210px;
+  width: 89%;
+  margin-bottom: 15px;
+}
+
+.nbrItmsShownTxt {
+  color: darkviolet;
+  font-weight: bold;
 }

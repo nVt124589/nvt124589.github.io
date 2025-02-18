@@ -1,25 +1,25 @@
 <ul>
-	<div ng-show="!(items.length == 0)" style="color:darkviolet; font-weight:bold;">
+	<div ng-show="!(items.length == 0)" class="nbrItmsShownTxt">
 	  {{ items.length }} {{ message }}<br /><br />
 	</div>
 
 	<div>
-	  <li ng-repeat="item in items" style="border:solid 1px; border-radius:5px; margin-bottom:15px;">
+	  <li ng-repeat="item in items" class="borders">
 		  <table>
 			<tr>
-			  <td><label>&nbsp;&nbsp;Name</label></td>
+			  <td><label>Name</label></td>
 			  <td>:&nbsp;</td>
 			  <td>{{ item.name }}</td>
 			</tr>
 
 			<tr>
-			  <td><label>&nbsp;&nbsp;Short Name</label></td>
+			  <td><label>Short Name</label></td>
 			  <td>:&nbsp;</td>
 			  <td>{{ item.short_name }}</td>
 			</tr>
 
 			<tr>
-			  <td><label>&nbsp;&nbsp;Description</label></td>
+			  <td><label>Description</label></td>
 			  <td>:&nbsp;</td>
 			  <td>{{ item.description }}</td>
 			</tr>
