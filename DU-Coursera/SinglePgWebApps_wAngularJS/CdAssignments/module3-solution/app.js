@@ -24,27 +24,25 @@
         title: '@title',
         message: '@message',
         onRemove: '&'
-      },
+      }/* ,
 
       controller: FoundItemsDirectiveController,
       controllerAs: 'nD',
-      bindToController: true
+      bindToController: true */
     };
 
     return ddo;
   }
 
-  function FoundItemsDirectiveController() {
+  /* function FoundItemsDirectiveController() {
     var nD = this;
-
     nD.msg = function() {
       if (nD.items.length > 1) nD.message = " items are shown.";
       else if (nD.items.length === 1) nD.message = " item is shown.";
       else nD.message = "";
-
       return nD.message;
     };
-  }
+  } */
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
