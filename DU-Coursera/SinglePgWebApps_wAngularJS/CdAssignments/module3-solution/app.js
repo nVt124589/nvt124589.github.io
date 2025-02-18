@@ -39,7 +39,8 @@
 
     nD.msg = function() {
       if (nD.items.length > 1) nD.message = " items are shown.";
-      else nD.message = " item is shown.";
+      else if (nD.items.length === 1) nD.message = " item is shown.";
+      else nD.message = "";
 
       return nD.message;
     };
