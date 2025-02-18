@@ -68,8 +68,8 @@
         .then(function(response) {
           narrowDown.found = response;
 
-          /* if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length > 1 ? " items are shown." : " item is shown.";
-          else narrowDown.message = ""; */
+          if (narrowDown.found.length !== 0) narrowDown.message = narrowDown.found.length > 1 ? " items are shown." : " item is shown.";
+          else narrowDown.message = "";
         })
         .catch(function(error) { console.log("Error : " + error + " !"); });
       };
