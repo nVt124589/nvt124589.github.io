@@ -1,0 +1,8 @@
+<table>
+  <tr ng-repeat="item in $ctrl.items">
+    <td class="width35 paddingLeft verticalAlignment">{{ item.name }}</td>
+    <td class="width17 paddingLeft verticalAlignment">{{ item.short_name }}</td>
+    <td class="width5 paddingLeft verticalAlignment">{{ item.price_large | currency : '$' }}</td>
+    <td class="width50 paddingLeft verticalAlignment">{{ item.description }}</td>
+  </tr>
+</table>
