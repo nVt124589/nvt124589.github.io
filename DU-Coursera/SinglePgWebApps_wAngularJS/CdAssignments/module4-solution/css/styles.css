@@ -1,0 +1,116 @@
+body {
+  font-size: 1.2em;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+li[ui-sref]:hover {
+  display: inline-block;
+  cursor: pointer;
+  border: solid black 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+label {
+  color: green;
+  font-style: italic;
+}
+
+.toBuyLsItmsTxtWidth {
+  width: 150px;
+}
+
+.widthSmall {
+  width: 25%;
+}
+
+.widthLarge {
+  width: 100%;
+}
+
+.width5 {
+  width: 5%;
+}
+
+.width10 {
+  width: 10%;
+}
+
+.width15 {
+  width: 15%;
+}
+
+.width17 {
+  width: 17%;
+}
+
+.width20 {
+  width: 20%;
+}
+
+.width25 {
+  width: 25%;
+}
+
+.width30 {
+  width: 30%;
+}
+
+.width35 {
+  width: 35%;
+}
+
+.width40 {
+  width: 40%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.txtMiddleAlign {
+  text-align: center;
+}
+
+.txtLeftAlign {
+  text-align: left;
+}
+
+.verticalAlignment {
+  vertical-align: top;
+}
+
+.paddingLeft {
+  padding-left: 20px;
+}
+
+.paddingBottom25 {
+  padding-bottom: 25px;
+}
+
+.borders {
+  border: solid 1px;
+  border-radius: 11px;
+  width: 210px;
+}
+
+.borders100 {
+  border: solid 1px;
+  border-radius: 11px;
+  width: 100%;
+}
+
+.categoriesItmTxt {
+  color: darkviolet;
+  text-decoration-line: underline;
+  font-weight: bold;
+}
