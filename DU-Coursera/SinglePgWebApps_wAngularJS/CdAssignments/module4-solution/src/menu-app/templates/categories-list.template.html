@@ -1,0 +1,15 @@
+<table class="widthLarge">
+  <tr><td>&nbsp;</td></tr>
+
+  <tr><th class="txtLeftAlign paddingLeft">Categories</th></tr>
+
+  <tr>
+    <td>
+      <ul>
+        <li ng-repeat="item in $ctrl.items" ui-sref="categories.items({ categoryShortName: item.short_name })">
+          {{ item.name }}
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
