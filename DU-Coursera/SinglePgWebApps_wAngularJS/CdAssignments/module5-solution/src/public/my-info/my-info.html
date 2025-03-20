@@ -1,0 +1,103 @@
+<div>
+  <div ng-if="myInfoCtrl.showRegisteredInfo">
+    <label class="tdoRequiredField">&nbsp;</label>
+    <label>Not Signed Up Yet. <a ui-sref="signup">Sign up Now !</a></label>
+  </div>
+
+  <div ng-show="!myInfoCtrl.showRegisteredInfo">
+  <fieldset>
+    <legend><label style="color:white;"><signedup-myinfo item="myInfoCtrl.item"></signedup-myinfo></label></legend>
+
+    <table>
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>First Name : </label>
+        </td>
+
+        <td class="tdoWidth35">{{ myInfoCtrl.FirstName }}</td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>Last Name : </label>
+        </td>
+
+        <td class="tdoWidth35">{{ myInfoCtrl.LastName }}</td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>Email Address : </label>
+        </td>
+
+        <td class="tdoWidth35">{{ myInfoCtrl.Email }}</td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>Phone : </label>
+        </td>
+
+        <td class="tdoWidth35">{{ myInfoCtrl.Phone }}</td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>Favorite Dish Menu # : </label>
+        </td>
+
+        <td class="tdoWidth35">{{ myInfoCtrl.FavoriteDishMenuNumber }}</td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>&nbsp;</label>
+        </td>
+
+        <td class="tdoWidth35">
+          <table>
+            <tr>
+              <td><img src="{{ myInfoCtrl.imgNm_wPath }}" alt="Favorite Dish Image" /></td>
+
+              <td class="tdoWidth1">&nbsp</td>
+
+              <td>
+                <table>
+                  <tr>
+                    <td class="txtTopAlignmt">
+                      <div><span class="boldUnderlinedTxt tdoWidth25">Title/Name</span></div>
+                    </td>
+
+                    <td class="tdoWidth2">&nbsp</td>
+
+                    <td class="marginLeft txtTopAlignmt">
+                      <div class="italicTxt tdoWidth72">{{ myInfoCtrl.item.name }}</div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="txtTopAlignmt">
+                      <div><span class="boldUnderlinedTxt tdoWidth25">Description</span></div>
+                    </td>
+
+                    <td class="tdoWidth2">&nbsp</td>
+
+                    <td class="marginLeft txtTopAlignmt">
+                      <div class="italicTxt tdoWidth72">{{ myInfoCtrl.item.description }}</div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
