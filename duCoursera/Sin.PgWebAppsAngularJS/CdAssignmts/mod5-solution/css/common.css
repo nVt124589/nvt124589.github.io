@@ -1,1 +1,101 @@
+.loading-indicator {
+    display: block;
+    width: 70px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 40%;
+    z-index: 100;
+    background-color: #FFF;
+}
+
+.loading-indicator img {
+    width: 70px;
+    background-color: #FFF;
+}
+
+.ui-view-placeholder {
+    margin-top: 60px;
+}
+
+.tdoInput {
+  background-color: yellow;
+  color: darkviolet;
+  font-weight: bold;
+  width: 225px;
+}
+
+.tdoWidth1 {
+  width: 1%;
+}
+
+.tdoWidth2 {
+  width: 2%;
+}
+
+.tdoWidth8 {
+  width: 8%;
+}
+
+.tdoWidth11 {
+  width: 11%;
+}
+
+.tdoWidth15 {
+  width: 15%;
+}
+
+.tdoWidth20 {
+  width: 20%;
+}
+
+.tdoWidth25 {
+  width: 25%;
+}
+
+.tdoWidth35 {
+  width: 35%;
+}
+
+.tdoWidth72 {
+  width: 72%;
+}
+
+.tdoWidth100 {
+  width: 100%;
+}
+
+.tdoRequiredField {
+  color: red;
+  padding-left: 8px;
+}
+
+.error {
+  color: orange;
+  font-weight: bold;
+}
+
+.success {
+  color: gold;
+  font-weight: bold;
+}
+
+.boldUnderlinedTxt {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.italicTxt {
+  font-style: italic;
+  color: lemonchiffon;
+}
+
+.marginLeft {
+  margin-left: 10px;
+}
+
+.txtTopAlignmt {
+  vertical-align: top;
+}
 
