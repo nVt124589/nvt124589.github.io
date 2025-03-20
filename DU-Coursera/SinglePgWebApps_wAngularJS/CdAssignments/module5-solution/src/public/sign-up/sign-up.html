@@ -1,0 +1,128 @@
+<fieldset>
+  <legend><label style="color:white;">SIGN UP FOR THE NEWSLETTER</label></legend>
+
+  <form name="signUpFrm" novalidate>
+    <table>
+      <tr>
+        <td colspan="2"><signup items="signUpCtrl.items"></signup></td>
+      </tr>
+
+      <tr><td colspan="2">&nbsp;</td></tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">*</label>
+          <label>First Name : </label>
+        </td>
+
+        <td class="tdoWidth35">
+          <input class="tdoInput" type="text" name="firstNm" placeholder="i.e. Peter" ng-model="signUpCtrl.firstNm" required minlength="1" ng-maxlength="25" />
+
+          <label>
+            <span ng-if="(signUpFrm.firstNm.$error.minlength || signUpFrm.firstNm.$error.required) && signUpFrm.firstNm.$touched">
+              'First Name' must be at least 1 character long
+            </span>
+
+            <span ng-if="signUpFrm.firstNm.$error.maxlength && signUpFrm.firstNm.$touched">
+              'First Name' must not be longer than 25 characters
+            </span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">*</label>
+          <label>Last Name : </label>
+        </td>
+
+        <td class="tdoWidth35">
+          <input class="tdoInput" type="text" name="lastNm" placeholder="i.e. Hegmant" ng-model="signUpCtrl.lastNm" required minlength="1" ng-maxlength="25" />
+
+          <label>
+            <span ng-if="(signUpFrm.lastNm.$error.minlength || signUpFrm.lastNm.$error.required) && signUpFrm.lastNm.$touched">
+              'Last Name' must be at least 1 character long
+            </span>
+
+            <span ng-if="signUpFrm.lastNm.$error.maxlength && signUpFrm.lastNm.$touched">
+              'Last Name' must not be longer than 25 characters
+            </span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">*</label>
+          <label>Email Address : </label>
+        </td>
+
+        <td class="tdoWidth35">
+          <input class="tdoInput" type="email" name="email" placeholder="i.e. test-123@domain.com" ng-model="signUpCtrl.email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+[.]{1}[a-z]{2,3}" required />
+
+          <label>
+            <span ng-if="signUpFrm.email.$invalid && signUpFrm.email.$touched">
+              'Email' must follow the valid format : test-123@domain.com
+            </span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">*</label>
+          <label>Phone : </label>
+        </td>
+
+        <td class="tdoWidth35">
+          <input class="tdoInput" type="text" name="phone" placeholder="i.e. (###) ###-####" ng-model="signUpCtrl.phone" pattern="[(]{1}[0-9]{3}[)]{1}[ ]{1}[0-9]{3}\-[0-9]{4}" required />
+
+          <label>
+            <span ng-if="signUpFrm.phone.$invalid && signUpFrm.phone.$touched">
+              'Phone' must follow the valid format : (###) ###-####
+            </span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>Favorite Dish Menu # : </label>
+        </td>
+
+        <td class="tdoWidth35">
+          <input class="tdoInput" type="text" name="favDishMenuNbr" placeholder="i.e. L1" ng-model="signUpCtrl.favDishMenuNbr" />
+          <label class="error">{{ signUpCtrl.msg }}</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tdoWidth8">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label>Form valid ?  {{ signUpFrm.$valid }}</label>
+        </td>
+
+        <td class="tdoWidth35">
+          <button ng-disabled="signUpFrm.$invalid"
+                  ng-click="signUpCtrl.submit({ FirstName: signUpCtrl.firstNm,
+                                                LastName: signUpCtrl.lastNm,
+                                                Email: signUpCtrl.email,
+                                                Phone: signUpCtrl.phone,
+                                                FavoriteDishMenuNumber: signUpCtrl.favDishMenuNbr }, signUpCtrl.items)">
+              Submit
+          </button>
+        </td>
+      </tr>
+
+      <tr><td colspan="2">&nbsp;</td></tr>
+
+      <tr>
+        <td colspan="2">
+          <label class="tdoRequiredField">&nbsp;</label>
+          <label class="success">{{ signUpCtrl.infoSaved }}</label>
+        </td>
+      </tr>
+    </table>
+  </form>
+</fieldset>
