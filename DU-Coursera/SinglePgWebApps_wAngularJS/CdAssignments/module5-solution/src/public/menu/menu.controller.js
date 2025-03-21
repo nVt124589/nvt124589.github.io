@@ -1,12 +1,1 @@
-(function () {
-  "use strict";
-
-  angular.module('public')
-  .controller('MenuController', MenuController);
-
-  MenuController.$inject = ['menuCategories'];
-  function MenuController(menuCategories) {
-    var $ctrl = this;
-    $ctrl.menuCategories = menuCategories;
-  }
-})();
+!function(){"use strict";function e(e){var t=this;t.menuItems=e}angular.module("public").controller("MenuItemsController",e),e.$inject=["menuItems"]}();
