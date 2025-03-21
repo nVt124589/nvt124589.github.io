@@ -104,7 +104,8 @@
         </td>
 
         <td class="tdoWidth35">
-          <button ng-class="[signUpCtrl.msg === '' ? 'btn btn-primary' : 'btn btn-danger' , { 'btn btn-success' : signUpCtrl.infoSaved !== '' }]"
+          <button class="btn btn-primary"
+                  ng-class="[signUpCtrl.msg === '' ? '' : 'btn btn-danger' , { 'btn btn-success' : signUpCtrl.infoSaved !== '' }]"
                   ng-disabled="signUpFrm.$invalid"
                   ng-click="signUpCtrl.submit({ FirstName: signUpCtrl.firstNm,
                                                 LastName: signUpCtrl.lastNm,
